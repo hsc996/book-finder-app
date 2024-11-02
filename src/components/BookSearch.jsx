@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { BookList } from "../components/BookList.jsx"
+import { BookList } from "./BookList.jsx";
+import '../styles/BookSearch.css';
 
 export function Main(){
     const [books, setBooks] = useState([]);
@@ -35,7 +36,7 @@ export function Main(){
         <>
             <div className="search-bar">
                 <input
-                id="user-input"
+                className="user-input"
                 type="text"
                 value={search}
                 onChange={(e) => {setSearch(e.target.value)}}/>

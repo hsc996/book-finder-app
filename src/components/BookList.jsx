@@ -1,3 +1,5 @@
+import '../styles/BookList.css';
+
 export function BookList({ books }) {
     return (
         <>
@@ -7,6 +9,7 @@ export function BookList({ books }) {
                         <div className="book-items" key={book.id}>
                             {book.volumeInfo.imageLinks && (
                                 <img
+                                    className='book'
                                     src={book.volumeInfo.imageLinks.smallThumbnail}
                                     alt={book.volumeInfo.title || "Book thumbnail"}
                                 />

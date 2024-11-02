@@ -1,5 +1,5 @@
-import './App.css';
-import { Main } from './components/Main';
+import './styles/App.css';
+import { Main } from './components/BookSearch';
 
 function App() {
     return (
