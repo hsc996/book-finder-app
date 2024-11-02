@@ -1,15 +1,22 @@
-
-export function BookList({books}){
-
-    return(
-        <div>
-            {books.map((book) => (
-                <div className="book-cont" key={book.id}>
-                    {book.volumeInfo.imageLinks && <img src={book.volumeInfo.imageLinks.smallThumbnail} alt={book.volumeInfo.title || "Book thumbnail"} />}
-                </div>
-            ))}
-        </div>
-    )
+export function BookList({ books }) {
+    return (
+        <>
+            <div id="books-container"> {/* Corrected ID here */}
+                {books.map((book) => {
+                    return (
+                        <div className="book-items" key={book.id}>
+                            {book.volumeInfo.imageLinks && (
+                                <img
+                                    src={book.volumeInfo.imageLinks.smallThumbnail}
+                                    alt={book.volumeInfo.title || "Book thumbnail"}
+                                />
+                            )}
+                            <h4 className="name">{book.volumeInfo.title}</h4>
+                            <h4 className="author">By {book.volumeInfo.authors}</h4>
+                        </div>
+                    );
+                })}
+            </div>
+        </>
+    );
 }
-
-export default BookList;

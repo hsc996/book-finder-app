@@ -18,7 +18,8 @@ export function Main(){
     
     const fetchBooks = async () => {
         try {
-            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyAGU4dxKU2QytvpHNMGO8hudqexDYHVPqw`);
+            const apiKey = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY
+            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`);
             const data = await response.json();
             if (data.items){
                 setBooks(data.items)
@@ -32,8 +33,10 @@ export function Main(){
 
     return(
         <>
-            <div>
-                <input type="text"
+            <div className="search-bar">
+                <input
+                id="user-input"
+                type="text"
                 value={search}
                 onChange={(e) => {setSearch(e.target.value)}}/>
                 <button onClick={handleSearch}>Search</button>
@@ -45,4 +48,3 @@ export function Main(){
 
 
 export default Main;
-

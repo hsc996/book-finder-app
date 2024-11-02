@@ -1,21 +1,8 @@
-// import { useEffect, useState } from "react";
-
-// export function SearchBook(){
-//     const [books, setBooks] = useState([]);
-
-//     useEffect(() => {
-//         fetchBooks();
-//     })
-    
-//     const fetchBooks = async () => {
-//         const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=react&key=AIzaSyAGU4dxKU2QytvpHNMGO8hudqexDYHVPqw`)
-//         const data = await response.json();
-//         console.log(data)
-//     };
-
-//     return(
-//         <div>
-
-//         </div>
-//     );
+// export const fetchBooksFromAPI = async (query) => {
+//     const apiKey = import.meta.env.GOOGLE_BOOKS_API_KEY
+//     const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=react&key=AIzaSyAGU4dxKU2QytvpHNMGO8hudqexDYHVPqw`);
+//     if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//     }
+//     return response.json();
 // };
