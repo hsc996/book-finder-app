@@ -3,8 +3,12 @@
     outline: none;
     background: transparent;
     background: #3d3d3d;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 5px;
     color: #fff;
     overflow-y: scroll;
+}
+
+.search-results {
+    margin: 2.5rem;
 }

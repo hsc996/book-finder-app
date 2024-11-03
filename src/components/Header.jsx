@@ -1,4 +1,5 @@
-import { NavBar } from '../components/Routing/NavBar'
+import { NavBar } from '../components/Routing/NavBar';
+import '../styles/Header.css'
 
 export function Header(){
     return(

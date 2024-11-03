@@ -34,14 +34,18 @@ export function SearchPage(){
 
     return(
         <>
-            <div className="search-bar">
-                <input
-                className="user-input"
-                type="text"
-                value={search}
-                onChange={(e) => {setSearch(e.target.value)}}/>
-                <button onClick={handleSearch}>Search</button>
-                <BookList books={books}/>
+            <div className="search-page">
+                <div className="search-bar>">
+                    <input
+                    className="user-input"
+                    type="text"
+                    value={search}
+                    onChange={(e) => {setSearch(e.target.value)}}/>
+                    <button onClick={handleSearch}>Search</button>
+                </div>
+                <div className="search-results">
+                    <BookList books={books}/>
+                </div>
             </div>
         </>
     );
