@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { BookList } from "./BookList.jsx";
 import { Header } from "./Header.jsx";
-import '../styles/BookSearch.css';
+import '../styles/SearchPage.css';
 
 export function SearchPage(){
     const [books, setBooks] = useState([]);
@@ -35,9 +35,11 @@ export function SearchPage(){
 
     return(
         <>
-            <Header onSearch={handleSearch} />
-            <div className="search-results">
-                <BookList books={books}/>
+            <div className="search-bar">
+                <Header onSearch={handleSearch} />
+                <div className="search-results">
+                    <BookList books={books}/>
+                </div>
             </div>
         </>
     );
