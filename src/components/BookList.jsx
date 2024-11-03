@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import '../styles/BookList.css';
 
+// eslint-disable-next-line react/prop-types
 export function BookList({ books }) {
     return (
         <>
-            <div id="books-container"> {/* Corrected ID here */}
+            <div id="books-container">
                 {books.map((book) => {
                     return (
                         <div className="book-items" key={book.id}>

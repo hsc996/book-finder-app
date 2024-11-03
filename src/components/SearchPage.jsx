@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BookList } from "./BookList.jsx";
 import '../styles/BookSearch.css';
 
-export function Main(){
+export function SearchPage(){
     const [books, setBooks] = useState([]);
     const [search, setSearch] = useState("");
     const [query, setQuery] = useState("");
@@ -48,4 +48,4 @@ export function Main(){
 };
 
 
-export default Main;
+export default SearchPage;
