@@ -1,5 +1,5 @@
 .header-content {
-    min-height: 75vh;
+    min-height: 70vh;
     background: radial-gradient(circle, rgba(174, 231, 238, 1) 9%, rgba(148, 187, 233, 1) 88%);
     display: flex; 
     flex-direction: column;
@@ -9,11 +9,11 @@
 }
 
 .header-title {
+    margin-top: 4rem;
     font-size: 4.2rem;
 }
 
 .header-text {
-    margin-top: -1.8rem;
     margin-bottom: 2.8rem;
     opacity: 0.8;
     max-width: 770px;
