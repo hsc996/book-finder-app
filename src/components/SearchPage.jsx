@@ -6,6 +6,7 @@ import '../styles/SearchPage.css';
 export function SearchPage(){
     const [books, setBooks] = useState([]);
     const [query, setQuery] = useState("");
+    const [errorMessage, setErrorMessage] = userState(false);
 
     const handleSearch = (searchTerm) => {
         setQuery(searchTerm);
@@ -25,7 +26,7 @@ export function SearchPage(){
                     setBooks([]);
                 }
             } catch (error) {
-                console.error("Error fetching books:", error);
+                setErrorMessage(error.message);
             }
         };
 
@@ -37,6 +38,9 @@ export function SearchPage(){
         <>
             <div className="search-bar">
                 <Header onSearch={handleSearch} />
+                <div className="errormessage">
+                    
+                </div>
                 <div className="search-results">
                     <BookList books={books}/>
                 </div>
